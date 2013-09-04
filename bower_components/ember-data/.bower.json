@@ -1,0 +1,14 @@
+{
+  "name": "ember-data",
+  "_cacheHeaders": {
+    "ETag": "\"d967368465dc54ecaa2c75a7f61affed\"",
+    "Last-Modified": "Sun, 01 Sep 2013 23:30:05 GMT",
+    "Content-Length": "185577",
+    "Content-Type": "text/javascript"
+  },
+  "_release": "e-tag:d96736846",
+  "main": "index.js",
+  "_source": "http://builds.emberjs.com.s3.amazonaws.com/daily/20130901/ember-data.js",
+  "_target": "*",
+  "_originalSource": "http://builds.emberjs.com.s3.amazonaws.com/daily/20130901/ember-data.js"
+}
