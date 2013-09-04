@@ -1,0 +1,9 @@
+{{#each post}}
+<div class="post">
+	<h2>{{#link-to 'post' this}}{{postTitle}}{{/link-to}}</h2>
+	<!--<h4 class="subheader">{{user.fullName}}</h4>-->
+	<div class="content">{{postContent}}</div>
+</div>
+{{/each}}
+
+{{outlet}}

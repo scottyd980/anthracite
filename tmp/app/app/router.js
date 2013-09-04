@@ -5,4 +5,8 @@ Anthracite.Router.map(function() {
   this.resource('todos', function () {
     this.route('index', { path: '/' });
   });
+  
+  this.resource('posts', function() {
+  	this.route('index', { path: '/'});
+  });
 });

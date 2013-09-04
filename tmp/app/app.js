@@ -93,6 +93,27 @@ Anthracite.Site.FIXTURES = [
 (function() {
 
 
+  Anthracite.Post = DS.Model.extend({
+    postTitle: DS.attr('string'),
+    postContent: DS.attr('string')
+  });
+
+  Anthracite.Post.FIXTURES = [{
+  	id: 1,
+	postTitle: 'Hello world!',
+	postContent: 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.'
+  }, {
+  	id: 2,
+    postTitle: 'Another Post',
+    postContent: 'Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.'
+  }]; 
+
+
+})();
+
+(function() {
+
+
   Anthracite.Todo = DS.Model.extend({
     name: DS.attr('string'),
     isDone: DS.attr('boolean')
@@ -125,6 +146,17 @@ Anthracite.ApplicationRoute = Ember.Route.extend({
 
 (function() {
 
+Anthracite.PostsRoute = Ember.Route.extend({
+  model: function(params) { 
+      return this.store.find('post'); 
+  }
+});
+
+
+})();
+
+(function() {
+
 Anthracite.TodosRoute = Ember.Route.extend({
   model: function(params) { 
       return this.store.find('todo'); 
@@ -145,6 +177,43 @@ Anthracite.AboutController = Ember.Controller.extend({
 (function() {
 
 Anthracite.ApplicationController = Ember.ArrayController.extend({
+});
+
+})();
+
+(function() {
+
+Anthracite.PostsIndexController = Ember.Controller.extend({
+  needs: ['posts']
+
+//  actions: {
+//    newTodo: function() { 
+//        this.store.createRecord('todo', {
+//          name: 'Get r done'
+//        }); 
+//    },
+//
+//    clearDone: function() {
+//      var todos = this.get('controllers.todos');
+//      var allDone = todos.filter(function(todo) {
+//        return todo.get('isDone');
+//      });
+//
+//      while (allDone.length > 0) {
+//        var todo = allDone.pop(); 
+//          todo.deleteRecord();
+//          todo.save(); 
+//      }
+//    }
+//  }
+});
+
+
+})();
+
+(function() {
+
+Anthracite.PostsController = Ember.ArrayController.extend({
 });
 
 })();
@@ -213,6 +282,10 @@ Anthracite.Router.map(function() {
 
   this.resource('todos', function () {
     this.route('index', { path: '/' });
+  });
+  
+  this.resource('posts', function() {
+  	this.route('index', { path: '/'});
   });
 });
 

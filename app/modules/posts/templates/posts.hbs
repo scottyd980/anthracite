@@ -1,0 +1,9 @@
+{{#each post in controller}}
+<div class="post">
+	<h2>{{post.postTitle}}</h2>
+	<!--<h4 class="subheader">{{user.fullName}}</h4>-->
+	<div class="content">{{post.postContent}}</div>
+</div>
+{{/each}}
+
+{{outlet}}
