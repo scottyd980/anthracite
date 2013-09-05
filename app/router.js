@@ -8,6 +8,7 @@ Anthracite.Router.map(function() {
   
   this.resource('posts', function() {
   	this.route('index', { path: '/'});
+  	this.route('new', { path: '/new'});
   });
   
   this.resource('post', { path: ':post_id' });
