@@ -41,6 +41,16 @@ function program3(depth0,data) {
   
 });
 
+Ember.TEMPLATES["components/blog-post"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<h1>Blog Post</h1>\n  <p>Lorem ipsum dolor sit amet.</p>");
+  
+});
+
 Ember.TEMPLATES["components/todo-item"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
@@ -148,6 +158,25 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
+Ember.TEMPLATES["post"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("<h2>");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "postTitle", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</h2>\n<div>");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "postContent", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</div>");
+  return buffer;
+  
+});
+
 Ember.TEMPLATES["posts/_post"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
@@ -158,23 +187,23 @@ function program1(depth0,data) {
   var hashTypes, hashContexts;
   hashTypes = {};
   hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "title", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "post.postTitle", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   }
 
   data.buffer.push("<div class=\"post\">\n	<h2>");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0],types:["STRING","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo || depth0.linkTo),stack1 ? stack1.call(depth0, "post", "", options) : helperMissing.call(depth0, "linkTo", "post", "", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "post", "post", options) : helperMissing.call(depth0, "link-to", "post", "post", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("</h2>\n	<h4 class=\"subheader\">");
+  data.buffer.push("</h2>\n	<!--<h4 class=\"subheader\">");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "user.fullName", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</h4>\n	<div class=\"content\">");
+  data.buffer.push("</h4>-->\n	<div class=\"content\">");
   hashTypes = {};
   hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "postContent", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "post.postContent", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("</div>\n</div>");
   return buffer;
   
@@ -193,24 +222,17 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 Ember.TEMPLATES["posts"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, hashTypes, hashContexts, escapeExpression=this.escapeExpression, self=this;
+  var buffer = '', stack1, hashTypes, hashContexts, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
 function program1(depth0,data) {
   
-  var buffer = '', hashTypes, hashContexts;
-  data.buffer.push("\n<div class=\"post\">\n	<h2>");
+  var buffer = '', stack1, hashTypes, hashContexts, options;
+  data.buffer.push("\n	");
   hashTypes = {};
   hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "post.postTitle", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</h2>\n	<!--<h4 class=\"subheader\">");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "user.fullName", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</h4>-->\n	<div class=\"content\">");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "post.postContent", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</div>\n</div>\n");
+  options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers.partial || depth0.partial),stack1 ? stack1.call(depth0, "posts/_post", options) : helperMissing.call(depth0, "partial", "posts/_post", options))));
+  data.buffer.push("\n");
   return buffer;
   }
 
