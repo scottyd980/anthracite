@@ -1,4 +1,4 @@
-Anthracite.PostsRoute = Ember.Route.extend({
+Anthracite.PostsIndexRoute = Ember.Route.extend({
   model: function(params) { 
       return this.store.find('post'); 
   }
