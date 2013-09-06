@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "ember-shim": "1.0.0",
-    "ember-data": "http://builds.emberjs.com.s3.amazonaws.com/daily/20130901/ember-data.js",
+    "ember-data": "http://builds.emberjs.com/beta/ember-data.min.js",
     "handlebars": "1.0.0",
     
     "bootstrap": "3.0.0-rc.2",

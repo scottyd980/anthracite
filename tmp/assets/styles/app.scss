@@ -24,7 +24,7 @@ nav {
 	z-index: 1000;
 	@include box-shadow(0px 0px 5px rgba(0,0,0,0.20));
 	
-	.brand {
+	.brand a {
 		float: left;
 		line-height: 60px;
 		font-size: 24px;
