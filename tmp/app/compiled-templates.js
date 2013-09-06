@@ -224,21 +224,23 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', hashContexts, hashTypes, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<div class=\"row\">\n    <div class=\"large-12 columns\">\n        ");
-  hashContexts = {'valueBinding': depth0,'placeholder': depth0};
-  hashTypes = {'valueBinding': "STRING",'placeholder': "STRING"};
+  data.buffer.push("<div class=\"row\">\n    <div class=\"large-12 columns\">\n    	<form role=\"form\">\n    		<div class=\"form-group\">\n		        ");
+  hashContexts = {'valueBinding': depth0,'placeholder': depth0,'class': depth0};
+  hashTypes = {'valueBinding': "STRING",'placeholder': "STRING",'class': "STRING"};
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.TextField", {hash:{
     'valueBinding': ("postTitle"),
-    'placeholder': ("Post Title")
+    'placeholder': ("Post Title"),
+    'class': ("form-control")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n        ");
-  hashContexts = {'valueBinding': depth0,'placeholder': depth0};
-  hashTypes = {'valueBinding': "STRING",'placeholder': "STRING"};
+  data.buffer.push("\n		    </div>\n		    <div class=\"form-group\">\n		        ");
+  hashContexts = {'valueBinding': depth0,'placeholder': depth0,'class': depth0};
+  hashTypes = {'valueBinding': "STRING",'placeholder': "STRING",'class': "STRING"};
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.TextArea", {hash:{
     'valueBinding': ("postContent"),
-    'placeholder': ("Write something here...")
+    'placeholder': ("Write something here..."),
+    'class': ("form-control")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n        <button ");
+  data.buffer.push("\n		    </div>\n		</form>\n        <button ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "publishPost", {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));

@@ -6,13 +6,7 @@ Anthracite.PostsNewController = Ember.ArrayController.extend({
 			
 			if (!postTitle.trim() || !postContent.trim()) { return; }
 			
-//			var post = Anthracite.Post.createRecord({
-//				postTitle: postTitle,
-//				postContent: postContent
-//			});
-
-			var store = this.get('store');
-			store.push('post', {
+			this.store.createRecord('post', {
 				id: 3,
 				postTitle: postTitle,
 				postContent: postContent
