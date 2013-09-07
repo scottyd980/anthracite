@@ -205,6 +205,9 @@ Anthracite.PostsNewController = Ember.ArrayController.extend({
 				postContent: postContent
 			});
 			
+			this.set('postTitle', '');
+			this.set('postContent', '');
+			
 			this.transitionToRoute('posts');
 		}
 	}
