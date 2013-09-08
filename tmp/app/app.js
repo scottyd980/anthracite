@@ -135,9 +135,19 @@ Anthracite.Site.FIXTURES = [
 (function() {
 
 Anthracite.ApplicationRoute = Ember.Route.extend({
-
   model: function(params) { 
       return this.store.find('site'); 
+  }
+});
+
+
+})();
+
+(function() {
+
+Anthracite.IndexRoute = Ember.Route.extend({
+  model: function(params) { 
+      return this.store.find('post'); 
   }
 });
 
@@ -178,6 +188,12 @@ Anthracite.AboutController = Ember.Controller.extend({
 
 Anthracite.ApplicationController = Ember.ArrayController.extend({
 });
+
+})();
+
+(function() {
+
+Anthracite.IndexController = Ember.ArrayController.extend({});
 
 })();
 

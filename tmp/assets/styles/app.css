@@ -19,7 +19,16 @@ nav {
     float: left;
     line-height: 60px;
     font-size: 24px;
-    color: #6fe0b2; }
+    color: #6fe0b2;
+    text-decoration: none; }
+  nav .links {
+    float: right;
+    line-height: 60px; }
+    nav .links a {
+      color: #e97770;
+      text-decoration: none; }
+      nav .links a:hover {
+        border-bottom: 1px dotted #e97770; }
 
 .index .post {
   margin-bottom: 50px;

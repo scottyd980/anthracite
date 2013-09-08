@@ -1,0 +1,1 @@
+Anthracite.IndexController = Ember.ArrayController.extend({});

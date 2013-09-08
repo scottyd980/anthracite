@@ -29,6 +29,21 @@ nav {
 		line-height: 60px;
 		font-size: 24px;
 		color: $mint;
+		text-decoration: none;
+	}
+	
+	.links {
+		float: right;
+		line-height: 60px;
+		
+		a {
+			color: $coral;
+			text-decoration: none;
+			
+			&:hover {
+				border-bottom: 1px dotted $coral;
+			}
+		}
 	}
 }
 
