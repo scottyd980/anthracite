@@ -2,12 +2,12 @@
     <div class="large-12 columns">
     	<form role="form">
     		<div class="form-group">
-		        {{view Ember.TextField valueBinding="postTitle" placeholder="Post Title" class="form-control"}}
+		        {{view Ember.TextField valueBinding="postTitle" placeholder="Post title" class="form-control"}}
 		    </div>
 		    <div class="form-group">
 		        {{view Ember.TextArea valueBinding="postContent" placeholder="Write something here..." class="form-control"}}
 		    </div>
 		</form>
-        <button {{action "publishPost"}}>Publish Post</button>
+        <button class="btn btn-info" {{action "publishPost"}}>Publish Post</button>
     </div>
 </div>

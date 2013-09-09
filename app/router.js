@@ -11,5 +11,5 @@ Anthracite.Router.map(function() {
   	this.route('new', { path: '/new'});
   });
   
-  this.resource('post', { path: ':post_id' });
+  this.resource('post', { path: '/post/:post_id' });
 });
