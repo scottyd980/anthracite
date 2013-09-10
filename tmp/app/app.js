@@ -284,6 +284,16 @@ Anthracite.IndexView = Ember.View.extend({
 
 (function() {
 
+Ember.Handlebars.registerBoundHelper('format-markdown', function (input) {
+	if (typeof input === 'string' && input.length) {
+		return new Handlebars.SafeString(marked(input));
+	}
+});
+
+})();
+
+(function() {
+
 Ember.Handlebars.registerBoundHelper('wordCount', function (value) {
   var ret;
   if (typeof value === 'string' && value.length) {

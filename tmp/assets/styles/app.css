@@ -48,3 +48,11 @@ nav {
         border-bottom: 1px dotted #e97770; }
   .index .post .content {
     line-height: 1.5em; }
+
+form .post-content {
+  height: 400px; }
+
+.markdown-preview h1.post-title {
+  color: #e97770;
+  margin-top: 0;
+  font-size: 48px; }

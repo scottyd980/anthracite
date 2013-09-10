@@ -185,7 +185,8 @@ function program1(depth0,data) {
   data.buffer.push("</h4>-->\n	<div class=\"content\">");
   hashTypes = {};
   hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "post.postContent", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  options = {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers['format-markdown'] || depth0['format-markdown']),stack1 ? stack1.call(depth0, "post.postContent", options) : helperMissing.call(depth0, "format-markdown", "post.postContent", options))));
   data.buffer.push("</div>\n</div>");
   return buffer;
   
@@ -221,15 +222,15 @@ function program1(depth0,data) {
 Ember.TEMPLATES["posts/new"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', hashContexts, hashTypes, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, hashContexts, hashTypes, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
 
-  data.buffer.push("<div class=\"row\">\n    <div class=\"large-12 columns\">\n    	<form role=\"form\">\n    		<div class=\"form-group\">\n		        ");
+  data.buffer.push("<div class=\"row\">\n    <div class=\"col-lg-6\">\n    	<form role=\"form\">\n    		<div class=\"form-group\">\n		        ");
   hashContexts = {'valueBinding': depth0,'placeholder': depth0,'class': depth0};
   hashTypes = {'valueBinding': "STRING",'placeholder': "STRING",'class': "STRING"};
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.TextField", {hash:{
     'valueBinding': ("postTitle"),
-    'placeholder': ("Post title"),
+    'placeholder': ("Post title..."),
     'class': ("form-control")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("\n		    </div>\n		    <div class=\"form-group\">\n		        ");
@@ -238,13 +239,22 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.TextArea", {hash:{
     'valueBinding': ("postContent"),
     'placeholder': ("Write something here..."),
-    'class': ("form-control")
+    'class': ("form-control post-content")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("\n		    </div>\n		</form>\n        <button class=\"btn btn-info\" ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "publishPost", {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(">Publish Post</button>\n    </div>\n</div>");
+  data.buffer.push(">Publish Post</button>\n   	</div>\n   	<div class=\"col-lg-6\">\n        <div class=\"markdown-preview\">\n        	<h1 class=\"post-title\">");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "postTitle", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</h1>\n        	");
+  hashTypes = {};
+  hashContexts = {};
+  options = {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers['format-markdown'] || depth0['format-markdown']),stack1 ? stack1.call(depth0, "postContent", options) : helperMissing.call(depth0, "format-markdown", "postContent", options))));
+  data.buffer.push("\n        </div>\n    </div>\n</div>");
   return buffer;
   
 });

@@ -77,5 +77,21 @@ nav {
 	}
 }
 
+form {
+
+	.post-content {
+		height: 400px;
+	}
+	
+}
+
+.markdown-preview {
+	h1.post-title {
+		color: $coral;
+		margin-top: 0;
+		font-size: 48px;
+	}
+}
+
 // Mixins
 

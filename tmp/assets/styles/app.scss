@@ -33,7 +33,7 @@ nav {
 		float: left;
 		line-height: 60px;
 		font-size: 24px;
-		color: $mint;
+		color: $coral;
 		text-decoration: none;
 	}
 	
@@ -56,11 +56,19 @@ nav {
 	.post {
 		margin-bottom: 50px;
 		padding-bottom: 50px;
-		border-bottom: 1px solid #6fe0b2;
+		border-bottom: 1px solid #999;
 		
 		h2 {
-			color: $coral;
-			margin-bottom: 10px;
+			margin-bottom: 15px;
+			
+			a {
+				color: $coral;
+				
+				&:hover {
+					text-decoration: none;
+					border-bottom: 1px dotted $coral;
+				}
+			}
 		}
 		
 		.content {
