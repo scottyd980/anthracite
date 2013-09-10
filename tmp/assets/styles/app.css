@@ -24,7 +24,7 @@ nav {
     float: left;
     line-height: 60px;
     font-size: 24px;
-    color: #6fe0b2;
+    color: #e97770;
     text-decoration: none; }
   nav .links {
     float: right;
@@ -38,8 +38,13 @@ nav {
 .index .post {
   margin-bottom: 50px;
   padding-bottom: 50px;
-  border-bottom: 1px solid #6fe0b2; }
+  border-bottom: 1px solid #999; }
   .index .post h2 {
-    margin-bottom: 0; }
+    margin-bottom: 15px; }
+    .index .post h2 a {
+      color: #e97770; }
+      .index .post h2 a:hover {
+        text-decoration: none;
+        border-bottom: 1px dotted #e97770; }
   .index .post .content {
     line-height: 1.5em; }
