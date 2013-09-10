@@ -40,14 +40,30 @@ nav {
   padding-bottom: 50px;
   border-bottom: 1px solid #999; }
   .index .post h2 {
-    margin-bottom: 15px; }
+    margin-bottom: 0px; }
     .index .post h2 a {
       color: #e97770; }
       .index .post h2 a:hover {
         text-decoration: none;
         border-bottom: 1px dotted #e97770; }
+  .index .post h3 {
+    margin-top: 0px; }
   .index .post .content {
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    font-size: 16px; }
+
+.post h2 {
+  margin-bottom: 0px; }
+  .post h2 a {
+    color: #e97770; }
+    .post h2 a:hover {
+      text-decoration: none;
+      border-bottom: 1px dotted #e97770; }
+.post h3 {
+  margin-top: 0px; }
+.post .content {
+  line-height: 1.5em;
+  font-size: 16px; }
 
 form .post-content {
   height: 400px; }

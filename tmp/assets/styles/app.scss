@@ -73,7 +73,20 @@ nav {
 		
 		.content {
 			line-height: 1.5em;
+			font-size: 16px;
 		}
+	}
+}
+
+.post {
+	h2 {
+		padding-bottom: 1px;
+		margin-bottom: 15px;
+	}
+	
+	.content {
+		line-height: 1.5em;
+		font-size: 16px;
 	}
 }
 
