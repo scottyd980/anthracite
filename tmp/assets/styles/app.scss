@@ -59,7 +59,7 @@ nav {
 		border-bottom: 1px solid #999;
 		
 		h2 {
-			margin-bottom: 15px;
+			margin-bottom: 0px;
 			
 			a {
 				color: $coral;
@@ -71,6 +71,10 @@ nav {
 			}
 		}
 		
+		h3 {
+			margin-top: 0px;
+		}
+		
 		.content {
 			line-height: 1.5em;
 			font-size: 16px;
@@ -80,8 +84,20 @@ nav {
 
 .post {
 	h2 {
-		padding-bottom: 1px;
-		margin-bottom: 15px;
+		margin-bottom: 0px;
+		
+		a {
+			color: $coral;
+			
+			&:hover {
+				text-decoration: none;
+				border-bottom: 1px dotted $coral;
+			}
+		}
+	}
+	
+	h3 {
+		margin-top: 0px;
 	}
 	
 	.content {

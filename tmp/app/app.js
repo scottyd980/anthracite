@@ -300,6 +300,16 @@ Ember.Handlebars.registerBoundHelper('format-markdown', function (input) {
 
 (function() {
 
+Ember.Handlebars.registerBoundHelper('moment', function (input) {
+	if( moment(input).isValid() ) {
+		return moment(input).format('dddd, MMMM DD, YYYY @ hh:mm a');
+	}
+});
+
+})();
+
+(function() {
+
 Ember.Handlebars.registerBoundHelper('wordCount', function (value) {
   var ret;
   if (typeof value === 'string' && value.length) {
