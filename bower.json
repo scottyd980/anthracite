@@ -9,7 +9,8 @@
     "bootstrap": "3.0.0",
     "normalize-css": "~2.1.1",
     "marked": "0.2.9",
-    "momentjs": "2.1.0"
+    "momentjs": "2.1.0",
+    "ember-addons.bs_for_ember": "~0.5.0"
   },
   "devDependencies": {
     "qunit": "~1.12.0"
