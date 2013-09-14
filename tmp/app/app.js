@@ -1,8 +1,9 @@
 (function() {
 
 /* global window, Ember */
-window.Anthracite = Ember.Application.create({
-});
+window.Anthracite = Ember.Application.createWithMixins(Bootstrap.Register);
+
+//window.Anthracite = Ember.Application.createWithMixins(Bootstrap.Register);
 
 // Load mixins and components before anything else
 
