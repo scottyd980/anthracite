@@ -16,6 +16,7 @@ Anthracite.PostsNewController = Ember.ArrayController.extend({
 			this.set('postContent', '');
 			
 			this.transitionToRoute('posts');
+			Bootstrap.GNM.push('Success!', postTitle + ' was successfully posted.', 'success');
 		}
 	}
 });
