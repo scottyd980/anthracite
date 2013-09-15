@@ -238,7 +238,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push("<div class=\"row\">\n    <div class=\"col-lg-6\">\n    	<form role=\"form\">\n    		<div class=\"form-group\">\n		        ");
   hashContexts = {'valueBinding': depth0,'placeholder': depth0,'class': depth0};
   hashTypes = {'valueBinding': "STRING",'placeholder': "STRING",'class': "STRING"};
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.TextField", {hash:{
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "Anthracite.FocusInputView", {hash:{
     'valueBinding': ("postTitle"),
     'placeholder': ("Post title..."),
     'class': ("form-control")

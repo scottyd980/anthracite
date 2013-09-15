@@ -285,6 +285,16 @@ Anthracite.TodosController = Ember.ArrayController.extend({
 
 (function() {
 
+Anthracite.FocusInputView = Ember.TextField.extend({
+  focusMyTextField: function() {
+   this.$().focus();
+  }.on('didInsertElement')
+});
+
+})();
+
+(function() {
+
 Anthracite.IndexView = Ember.View.extend({
 });
 
