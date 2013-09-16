@@ -162,7 +162,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push("</small></h3>\n	<div class=\"content\">");
   hashTypes = {};
   hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "postContent", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  options = {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers['format-markdown'] || depth0['format-markdown']),stack1 ? stack1.call(depth0, "postContent", options) : helperMissing.call(depth0, "format-markdown", "postContent", options))));
   data.buffer.push("</div>\n</div>");
   return buffer;
   
